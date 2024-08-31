@@ -21,15 +21,13 @@
 .container-header {
   display: flex;
   margin: 20px 10px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center; 
 }
 
 .container-header img {
   width: 10%;
 }
-
-
 
 .container-header-nav .nav-link {
   text-decoration: none;
@@ -50,16 +48,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* Ocupa pelo menos 80% da altura da viewport */
+  min-height: 86vh; /* Ocupa pelo menos 80% da altura da viewport */
   background-color: var(--cor-branco1); /* Fundo para diferenciar do cabeçalho */
 }
 
 .container-main-div {
   background-color: var(--cor-branco2);
-  padding: 30px;
+  padding: 60px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar o formulário */
-  max-width: 600px;
+  max-width: 800px;
   width: 100%; /* Para garantir que ocupe 100% do espaço no mobile */
 }
 
@@ -75,6 +73,18 @@
   flex-direction: column;
 }
 
+.container-main-form-Labels {
+  display: flex;
+  flex-direction: row;
+  gap: 114px;
+}
+
+.container-main-form-inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
 .container-main-form label {
   font-size: 18px;
   margin-bottom: 8px;
@@ -83,6 +93,7 @@
 
 .container-main-form input[type="text"],
 .container-main-form textarea {
+  resize: none;
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -112,4 +123,40 @@
 
 #click_button:hover {
   background-color: var(--cor-verde2);
+}
+
+
+
+/* seção footer */
+
+.container-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10px; /* Adiciona um padding interno */
+  background-color: var(--cor-branco2); /* Cor de fundo para o footer */
+  color: black; /* Cor do texto */
+}
+
+.container-footer p {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.container-footer-nav {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os links de navegação */
+}
+
+.container-footer-nav .nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.container-footer-nav .nav-link:hover {
+  color: var(--cor-hover);
+  transform: scale(1.05);
 }

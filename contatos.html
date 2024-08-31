@@ -23,39 +23,54 @@
   <main>
 
     <section class="container-main">
-
       <div class="container-main-div">
-
         <h1>Entre em contato conosco</h1>
         <form class="container-main-form">
-          <label for="Email">Email</label><br>
-          <input type="text"><br>
-          <label for="Mensage">mensagem</label><br>
-          <textarea name="" id="" cols="50" rows="10"></textarea><br>
-          <input id="click_button" type="button" value="Enviar">
+
+          <div class="container-main-form-Labels">
+            <label for="Name">Nome</label><br>
+            <label for="Email">Email</label><br>
+            <label for="Phone">Telefone</label><br>
+          </div>
+         
+
+          <div class="container-main-form-inputs">
+            <input type="text"><br>
+            <input type="text"><br>
+            <input type="text"><br>
+          </div>
           
+
+          <label for="Mensage">Mensagem</label><br>
+          <textarea name="" id="" cols="50" rows="10"></textarea><br>
+          <input id="click_button" type="submit" value="Enviar">
+
+
         </form>
-
       </div>
-
-    
-  
     </section>
     
   </main>
 
   <footer>
-    <section>
-      <nav>
-        <a href="">Instagram</a>
-        <a href="">Twiter</a>
-        <a href="">Linkdin</a>
-        <a href="">Youtube</a>
+    <section class="container-footer">
+      <p><i>Todos os direitos reservados a Medcal</i></p>
+      <nav class="container-footer-nav">
+        <a class="nav-link" href="#">
+          <img src="./Assets/icons/icons8-instagram-50.png" alt="Ícone-instagram" srcset="">
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Assets/icons/icons8-twitterx-50.png" alt="Ícone-twitterx" srcset="">
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Assets/icons/icons8-linkedin-50.png" alt="Ícone-linkedin" srcset="">
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Assets/icons/icons8-youtube-50.png" alt="Ícone-Youtube" srcset="">
+        </a>
       </nav>
-      <p>Todos os direitos reservados a Medcal</p>
     </section>
   </footer>
-
   <!-- <script>
     click = document.getElementById("click_button");
     click.addEventListener('click', function(){
