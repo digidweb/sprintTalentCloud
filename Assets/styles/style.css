@@ -17,29 +17,42 @@
 
 /* seção cabeçalho */
 
-
-.container-header {
+/* .container-header {
   display: flex;
   margin: 20px 10px;
   justify-content: space-around;
   align-items: center; 
+  background-color: var(--cor-branco1);
+  
+} */
+
+.container-header {
+  display: flex;
+  margin: 0; /* Remove qualquer margem externa */
+  padding: 20px 10px; /* Mantém o padding interno se necessário */
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--cor-verde4);
+  width: 100%; /* Garante que o footer ocupe 100% da largura da viewport */
+  box-sizing: border-box; /* Inclui o padding na largura total */
 }
 
+
 .container-header img {
-  width: 10%;
+  width: 13%;
 }
 
 .container-header-nav .nav-link {
   text-decoration: none;
-  color: var(--cor-verde4);
+  color: var(--cor-branco2);
   font-size: 34px;
   font-weight: 600;
-  margin-left: 30px; 
+  margin-left: 50px; 
   transition: color 0.3s; 
 }
 
 .container-header-nav .nav-link:hover {
-  color: var(--cor-verde3); 
+  color: var(--cor-branco1); 
 }
 
 /* seção conteudo */
@@ -54,7 +67,7 @@
 
 .container-main-div {
   background-color: var(--cor-branco2);
-  padding: 60px;
+  padding: 69px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar o formulário */
   max-width: 800px;
@@ -113,10 +126,13 @@
 #click_button {
   background-color: var(--cor-verde4);
   color: var(--cor-branco2);
-  padding: 12px;
+  padding: 18px;
+  width: 830px;
+  height: 80px;
   border: none;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 20px;
+
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -133,10 +149,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 20px 10px; /* Adiciona um padding interno */
-  background-color: var(--cor-branco2); /* Cor de fundo para o footer */
-  color: black; /* Cor do texto */
+  padding: 20px 10px;
+  background-color: var(--cor-verde4);
+  color: black;
+  width: 100%; /* Garante que o footer ocupe toda a largura da página */
+  margin: 0; /* Remove margens externas */
+  box-sizing: border-box; /* Inclui padding na largura total */
 }
+
 
 .container-footer p {
   font-size: 16px;
@@ -146,6 +166,14 @@
 .container-footer-nav {
   display: flex;
   gap: 20px; /* Espaçamento entre os links de navegação */
+}
+
+.direitos-autorais {
+  color: var(--cor-branco2); 
+}
+
+.media-icon {
+  color: var(--cor-branco2);
 }
 
 .container-footer-nav .nav-link {
