@@ -38,7 +38,7 @@ body {
   padding: 20px 10px; /* Mantém o padding interno se necessário */
   justify-content: space-around;
   align-items: center;
-  background-color: var(--cor-branco2);
+  background-color: var(--cor-verde4);
   width: 100%; /* Garante que o footer ocupe 100% da largura da viewport */
   box-sizing: border-box; /* Inclui o padding na largura total */
 }
@@ -50,7 +50,7 @@ body {
 
 .container-header-nav .nav-link {
   text-decoration: none;
-  color: var(--cor-verde4);
+  color: var(--cor-branco2);
   font-size: 34px;
   font-weight: 600;
   margin-left: 50px; 
@@ -58,7 +58,7 @@ body {
 }
 
 .container-header-nav .nav-link:hover {
-  color: var(--cor-verde3); 
+  color: var(--cor-branco1); 
 }
 
 /* seção conteudo */
@@ -156,7 +156,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 20px 10px;
-  background-color: var(--cor-branco2);
+  background-color: var(--cor-verde4);
   color: black;
   width: 100%; /* Garante que o footer ocupe toda a largura da página */
   margin: 0; /* Remove margens externas */
@@ -175,7 +175,7 @@ body {
 }
 
 .direitos-autorais {
-  color: black; 
+  color: var(--cor-branco2); 
 }
 
 .media-icon {
