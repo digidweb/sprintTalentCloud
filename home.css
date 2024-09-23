@@ -158,9 +158,11 @@ footer img:hover {
     height: auto;
     display: block;
 }
+
 #div-top{
 background-color: var(--cor-branco2);
 }
+
 #sec_central{
     max-width:80%;
     align-items: center;
