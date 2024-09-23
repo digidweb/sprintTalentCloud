@@ -13,6 +13,12 @@
   --cor-verde4: #047857;
 
   --cor-hover: #272727; 
+
+  --font-family-base: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font-family-base);
 }
 
 /* seção cabeçalho */
@@ -32,7 +38,7 @@
   padding: 20px 10px; /* Mantém o padding interno se necessário */
   justify-content: space-around;
   align-items: center;
-  background-color: var(--cor-verde4);
+  background-color: var(--cor-branco2);
   width: 100%; /* Garante que o footer ocupe 100% da largura da viewport */
   box-sizing: border-box; /* Inclui o padding na largura total */
 }
@@ -44,7 +50,7 @@
 
 .container-header-nav .nav-link {
   text-decoration: none;
-  color: var(--cor-branco2);
+  color: var(--cor-verde4);
   font-size: 34px;
   font-weight: 600;
   margin-left: 50px; 
@@ -52,7 +58,7 @@
 }
 
 .container-header-nav .nav-link:hover {
-  color: var(--cor-branco1); 
+  color: var(--cor-verde3); 
 }
 
 /* seção conteudo */
@@ -150,7 +156,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 20px 10px;
-  background-color: var(--cor-verde4);
+  background-color: var(--cor-branco2);
   color: black;
   width: 100%; /* Garante que o footer ocupe toda a largura da página */
   margin: 0; /* Remove margens externas */
@@ -169,7 +175,7 @@
 }
 
 .direitos-autorais {
-  color: var(--cor-branco2); 
+  color: black; 
 }
 
 .media-icon {
