@@ -27,7 +27,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: right; /* Alinha os itens à direita */
+    justify-content: flex-end; /* Alinha os itens à direita */
     padding-left: 20px; /* Adiciona espaçamento à esquerda */
 }
 
@@ -92,7 +92,6 @@ div {
     background-color: var(--cor-branco1);
     color: var(--cor-hover);
     font-size: larger;
-    border-radius: 0.5rem;
 }
 
 footer {
@@ -139,6 +138,7 @@ footer img:hover {
     background-color: var(--cor-branco1); /* Pode manter ou alterar conforme necessário */
     border-radius: 0.5rem; /* Para arredondar os cantos */
 }
+
 .container-main-div {
     display: flex; /* Torna a div flexível */
     align-items: center; /* Alinha verticalmente os itens ao centro */
@@ -158,11 +158,13 @@ footer img:hover {
     height: auto;
     display: block;
 }
-#div-top{
-background-color: var(--cor-branco2);
+
+#div-top {
+    background-color: var(--cor-branco2);
 }
-#sec_central{
-    max-width:80%;
+
+#sec_central {
+    max-width: 80%;
     align-items: center;
     padding-left: 6.2rem;
 }
