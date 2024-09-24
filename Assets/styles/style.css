@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Garante que padding e borda sejam incluídos nas dimensões dos elementos */
 }
 
 :root {
@@ -12,97 +13,99 @@
   --cor-verde3: #98FF98;
   --cor-verde4: #047857;
 
-  --cor-hover: #272727; 
+  --cor-hover: #272727;
 }
 
-/* seção cabeçalho */
+/* Resetando o body e definindo fundo */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-branco1);
+}
 
-
+/* Estilizando o cabeçalho */
 .container-header {
   display: flex;
-  margin: 20px 10px;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
+  padding: 20px 10px;
+  background-color: var(--cor-verde4);
 }
 
 .container-header img {
   width: 10%;
 }
 
+.nav-list {
+  list-style: none;
+  display: flex;
+}
 
+.nav-list li {
+  margin-left: 30px;
+}
 
-.container-header-nav .nav-link {
+.nav-list .nav-link {
   text-decoration: none;
-  color: var(--cor-verde4);
-  font-size: 34px;
-  font-weight: 600;
-  margin-left: 30px; 
-  transition: color 0.3s; 
+  color: var(--cor-branco2);
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.container-header-nav .nav-link:hover {
-  color: var(--cor-verde3); 
+.nav-list .nav-link:hover {
+  color: var(--cor-verde3);
 }
 
-/* seção conteudo */
-
+/* Seção principal */
 .container-main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* Ocupa pelo menos 80% da altura da viewport */
-  background-color: var(--cor-branco1); /* Fundo para diferenciar do cabeçalho */
+  min-height: 80vh;
+  padding: 20px;
+  background-color: var(--cor-branco1);
 }
 
 .container-main-div {
+  display: flex;
+  flex-direction: row; /* Coloca os elementos lado a lado */
+  align-items: center;
+  justify-content: space-between; /* Espaçamento entre elementos */
   background-color: var(--cor-branco2);
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar o formulário */
-  max-width: 600px;
-  width: 100%; /* Para garantir que ocupe 100% do espaço no mobile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
 }
 
 .container-main-div h1 {
   font-size: 28px;
   color: var(--cor-verde4);
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left; /* Alinhamento do título à esquerda */
 }
 
-.container-main-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.container-main-form label {
+.container-main-div p {
   font-size: 18px;
-  margin-bottom: 8px;
-  color: var(--cor-verde4);
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
-.container-main-form input[type="text"],
-.container-main-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid var(--cor-verde2);
-  border-radius: 4px;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.container-main-form input[type="text"]:focus,
-.container-main-form textarea:focus {
-  border-color: var(--cor-verde4);
-  box-shadow: 0 0 8px rgba(0, 150, 0, 0.2);
+.container-main-div img {
+  max-width: 40%; /* Redimensiona a imagem para caber ao lado do texto */
+  height: auto;
+  margin-left: 20px;
+  border-radius: 8px;
 }
 
 #click_button {
   background-color: var(--cor-verde4);
   color: var(--cor-branco2);
-  padding: 12px;
+  padding: 12px 20px;
   border: none;
   border-radius: 4px;
   font-size: 18px;
@@ -112,4 +115,76 @@
 
 #click_button:hover {
   background-color: var(--cor-verde2);
+}
+
+/* Seções resumidas abaixo */
+#secoes-resumidas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.resumo-pagina {
+  width: 80%;
+  background-color: var(--cor-branco2);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.resumo-pagina h2 {
+  font-size: 24px;
+  color: var(--cor-verde4);
+  margin-bottom: 10px;
+}
+
+.resumo-pagina p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: var(--cor-verde4);
+  padding: 20px;
+  text-align: center;
+}
+
+footer img {
+  width: 40px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+}
+
+.rodape {
+  color: var(--cor-branco2);
+  font-size: 14px;
+  padding-top: 0.2rem;
+}
+
+.nav-link {
+  color: var(--cor-branco2);
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding-left: 0.5rem;
+}
+
+.nav-link:hover {
+  color: var(--cor-verde3); /* Muda a cor no hover */
+}
+#agendamento-but{
+  padding: 1.5rem;
+  background-color: var(--cor-verde4);
+  color: var(--cor-branco2);
+  font-size: 16px;
 }

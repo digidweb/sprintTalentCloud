@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/styles/style.css">
-    <title>MedCal - Agendamento</title>
-</head>
-<body>
-    <header class="container-header">
-    
-        <img src="./Assets/img/Logo.png" alt="Logo MedCal">
-    
-        <nav class="container-header-nav">
-            <a href="inicio.html" class="nav-link">Início</a>
-            <a href="agendamento.html" class="nav-link">Agendamento</a>
-            <a href="usos.html" class="nav-link">Usos</a>
-            <a href="planos.html" class="nav-link">Planos</a>
-            <a href="contatos.html" class="nav-link">Contatos</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Agende sua consulta</h1>
-            <div style="width: 500px; 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./Assets/styles/style.css">
+        <title>MedCal - Agendamento</title>
+    </head>
+    <body>
+        <header class="container-header">
+            <img src="./Assets/img/Logo.png" alt="Logo MedCal">
+
+            <nav class="container-header-nav">
+                <ul class="nav-list">
+                    <li><a href="inicio.html" class="nav-link">Início</a></li>
+                    <li><a href="agendamento.html"
+                            class="nav-link">Agendamento</a></li>
+                    <li><a href="usos.html" class="nav-link">Usos</a></li>
+                    <li><a href="planos.html" class="nav-link">Planos</a></li>
+                    <li><a href="contatos.html"
+                            class="nav-link">Contatos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>Agende sua consulta</h1>
+                <div style="width: 500px; 
                         height: 400px; 
                         border:1px solid black; 
                         background-color:rgb(243, 238, 238);
                         border-radius:10px;">
-            </div>
-            <!-- <script>
+                </div>
+                <input id="click_button" type="submit" value="Enviar">
+                <!-- <script>
             </script> -->
-        </section>
-    </main>
-    <footer>
-        <section>
-            <nav>
-            <a href="">Instagram</a>
-            <a href="">Twiter</a>
-            <a href="">Linkdin</a>
-            <a href="">Youtube</a>
-            </nav>
+            </section>
+        </main>
+        <footer id="container-footer">
+            <section>
+                <img src="https://img.icons8.com/ios-filled/50/facebook-new.png"
+                    alt="Facebook">
+                <img
+                    src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"
+                    alt="Instagram">
+                <img src="https://img.icons8.com/ios-filled/50/twitterx--v1.png"
+                    alt="Twitter">
+                <img src="https://img.icons8.com/ios-filled/50/youtube-play.png"
+                    alt="YouTube">
 
-            <p>Todos os direitos reservados à Medcal</p>
-        </section>
-    </footer>
-    <!-- <script>
+                <p>Todos os direitos reservados à Medcal</p>
+            </section>
+        </footer>
+        <!-- <script>
     click = document.getElementById("click_button");
     click.addEventListener('click', function(){
         alert("mensagem enviada")
     })
     </script> -->
-</body>
+    </body>
 </html>
