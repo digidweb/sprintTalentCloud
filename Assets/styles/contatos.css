@@ -22,7 +22,6 @@ body {
 }
 
 /* seção cabeçalho */
-
 /* .container-header {
   display: flex;
   margin: 20px 10px;
@@ -130,7 +129,7 @@ body {
 }
 
 #click_button {
-  background-color: var(--cor-verde4);
+  background-color: var(--cor-verde2);
   color: var(--cor-branco2);
   padding: 18px;
   width: 830px;
@@ -144,7 +143,7 @@ body {
 }
 
 #click_button:hover {
-  background-color: var(--cor-verde2);
+  background-color: var(--cor-verde4);
 }
 
 
