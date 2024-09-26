@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MedCal - Contatos</title>
-  <link rel="stylesheet" href="./Assets/styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/styles/home.css">
+    <link rel="stylesheet" href="./Assets/styles/padrao.css">
+    <link rel="stylesheet" href="./Assets/styles/contatos.css"> <!-- CSS específico para contatos -->
+    <title>MedCal - Contatos</title>
 </head>
 <body>
-  <!-- Cabeçalho -->
-  <header class="container-header">
-    <img src="./Assets/img/Logo.png" alt="Logo da Empresa">
+    <!-- Cabeçalho -->
+    <header id="header" class="container-header">
+        <nav>
+            <ul class="nav-list container-header-nav">
+                <li><a href="consultas.html" class="nav-link">Consultas</a></li>
+                <li><a href="medicos.html" class="nav-link">Médicos</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+                <li><a href="contatos.html" class="nav-link">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav class="container-header-nav">
-      <ul class="nav-list">
-        <li><a href="inicio.html" class="nav-link">Início</a></li>
-        <li><a href="agendamento.html" class="nav-link">Agendamento</a></li>
-        <li><a href="usos.html" class="nav-link">Usos</a></li>
-        <li><a href="planos.html" class="nav-link">Planos</a></li>
-        <li><a href="contatos.html" class="nav-link">Contatos</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Seção Principal -->
+    <main class="container-main">
+        <section class="container-main">
+            <div class="container-main-div">
+                <h1 id="contact-title">Entre em contato conosco</h1>
+                <p id="contact-description">Preencha o formulário abaixo para nos enviar uma mensagem.</p>
+                <form class="container-main-form">
+                    <label for="Name">Nome</label>
+                    <input type="text" id="Name" name="Name" placeholder="Digite seu nome" required><br>
+        
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" name="Email" placeholder="Digite seu email" required><br>
+        
+                    <label for="Phone">Telefone</label>
+                    <input type="tel" id="Phone" name="Phone" placeholder="Digite seu telefone" required><br>
+        
+                    <label for="Message">Mensagem</label>
+                    <textarea id="Message" name="Message" cols="50" rows="10" placeholder="Escreva sua mensagem" required></textarea><br>
+        
+                    <input id="click_button" type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </main>
 
-  <!-- Seção Principal -->
-  <main>
-    <section class="container-main">
-      <div class="container-main-div">
-        <div class="content">
-          <h1>Entre em contato conosco</h1>
-          <form class="container-main-form">
-            <label for="Name">Nome</label>
-            <input type="text" id="Name" name="Name" placeholder="Digite seu nome"><br>
-
-            <label for="Email">Email</label>
-            <input type="text" id="Email" name="Email" placeholder="Digite seu email"><br>
-
-            <label for="Phone">Telefone</label>
-            <input type="text" id="Phone" name="Phone" placeholder="Digite seu telefone"><br>
-
-            <label for="Mensage">Mensagem</label>
-            <textarea id="Mensage" name="Mensage" cols="50" rows="10" placeholder="Escreva sua mensagem"></textarea><br>
-
-            <input id="click_button" type="submit" value="Enviar">
-          </form>
-    </section>
-  </main>
-
-  <!-- Rodapé -->
-  <footer>
-    <section class="container-footer">
-      <p><i class="direitos-autorais">Todos os direitos reservados a MedCal</i></p>
-
-      <nav class="container-footer-nav">
-        <img src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="Facebook">
-        <img src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png" alt="Instagram">
-        <img src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="Twitter">
-        <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="YouTube">
-      </nav>
-    </section>
-  </footer>
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <hr>
+        <nav>
+            <img src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="Facebook">
+            <img src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png" alt="Instagram">
+            <img src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="Twitter">
+            <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="YouTube">
+        </nav>
+    </footer>
 </body>
 </html>

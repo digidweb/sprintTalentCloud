@@ -1,13 +1,5 @@
 /* home.css */
-:root {
-    --cor-branco1: #E0E0E0;
-    --cor-branco2: #FFFFFF;
-    --cor-verde1: #228B22;
-    --cor-verde2: #66BB6A;
-    --cor-verde3: #98FF98;
-    --cor-verde4: #047857;
-    --cor-hover: #272727; 
-}
+
 
 body {
     font-family: Arial, sans-serif;
@@ -16,30 +8,6 @@ body {
     background-color: var(--cor-branco2);
 }
 
-#header {
-    background-color: var(--cor-verde4); /* Verde escuro */
-    color: var(--cor-branco2);
-    padding: 20px 0;
-}
-
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: right; /* Alinha os itens à direita */
-    padding-left: 20px; /* Adiciona espaçamento à esquerda */
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-.nav-list a {
-    color: var(--cor-branco2);
-    text-decoration: none;
-    font-weight: bold;
-}
 
 nav a:hover {
     text-decoration: underline;
@@ -95,34 +63,9 @@ div {
     border-radius: 0.5rem;
 }
 
-footer {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 20px 0;
-}
 
-footer hr {
-    margin-bottom: 20px;
-}
 
-footer img {
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
 
-footer img:hover {
-    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
-}
-
-.rodape {
-    font-size: 12px;
-    color: var(--cor-branco2);
-    display: flex;
-    height: 1.8rem;
-    background-color: var(--cor-verde4);
-    padding-right: 2.5rem;
-}
 
 #secoes-resumidas {
     display: flex;

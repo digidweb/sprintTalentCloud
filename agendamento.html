@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./Assets/styles/style.css">
-        <title>MedCal - Agendamento</title>
-    </head>
-    <body>
-        <header class="container-header">
-            <img src="./Assets/img/Logo.png" alt="Logo MedCal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/styles/agendamento.css">
+    <link rel="stylesheet" href="./Assets/styles/padrao.css"> <!-- Carrega os estilos do padrão -->
+    <title>MedCal - Agendamento</title>
+</head>
+<body>
+    <!-- Header herdando os estilos do padrao.css -->
+    <header id="header" class="container-header">
+        <nav>
+            <ul class="nav-list container-header-nav">
+                <li><a href="#" class="nav-link">Consultas</a></li>
+                <li><a href="#" class="nav-link">Médicos</a></li>
+                <li><a href="#" class="nav-link">Sobre Nós</a></li>
+                <li><a href="#" class="nav-link">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <nav class="container-header-nav">
-                <ul class="nav-list">
-                    <li><a href="inicio.html" class="nav-link">Início</a></li>
-                    <li><a href="agendamento.html"
-                            class="nav-link">Agendamento</a></li>
-                    <li><a href="usos.html" class="nav-link">Usos</a></li>
-                    <li><a href="planos.html" class="nav-link">Planos</a></li>
-                    <li><a href="contatos.html"
-                            class="nav-link">Contatos</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main>
-            <section>
+    <main class="container-main">
+        <section class="container-main-div">
+            <div>
                 <h1>Agende sua consulta</h1>
-                <div style="width: 500px; 
-                        height: 400px; 
-                        border:1px solid black; 
-                        background-color:rgb(243, 238, 238);
-                        border-radius:10px;">
-                </div>
-                <input id="click_button" type="submit" value="Enviar">
-                <!-- <script>
-            </script> -->
-            </section>
-        </main>
-        <footer id="container-footer">
-            <section>
-                <img src="https://img.icons8.com/ios-filled/50/facebook-new.png"
-                    alt="Facebook">
-                <img
-                    src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"
-                    alt="Instagram">
-                <img src="https://img.icons8.com/ios-filled/50/twitterx--v1.png"
-                    alt="Twitter">
-                <img src="https://img.icons8.com/ios-filled/50/youtube-play.png"
-                    alt="YouTube">
+                <p>Preencha os dados abaixo para agendar sua consulta.</p>
+                <!-- Formulário de Agendamento -->
+                <form id="form-agendamento">
+                    <label for="data">Selecione a data:</label>
+                    <input type="date" id="data" name="data" required><br><br>
 
-                <p>Todos os direitos reservados à Medcal</p>
-            </section>
-        </footer>
-        <!-- <script>
-    click = document.getElementById("click_button");
-    click.addEventListener('click', function(){
-        alert("mensagem enviada")
-    })
-    </script> -->
-    </body>
+                    <label for="hora">Selecione a hora:</label>
+                    <input type="time" id="hora" name="hora" required><br><br>
+
+                    <label for="mensagem">Informações adicionais:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva suas necessidades ou dúvidas..." required></textarea><br><br>
+
+                    <button type="submit" id="click_button">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer herdando os estilos do padrao.css -->
+    <footer class="rodape">
+        <hr>
+        <img src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="Facebook">
+        <img src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png" alt="Instagram">
+        <img src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="Twitter">
+        <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="YouTube">
+    </footer>
+</body>
 </html>
