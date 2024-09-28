@@ -9,34 +9,6 @@
     --cor-hover: #272727; 
 }
 
-#header {
-    background-color: var(--cor-verde4); /* Verde escuro */
-    color: var(--cor-branco2);
-    padding: 20px 0;
-}
-
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end; /* Alinha os itens à direita */
-    padding-left: 20px; /* Adiciona espaçamento à esquerda */
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-.nav-list a {
-    color: var(--cor-branco2);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
 
 
 body {
@@ -85,23 +57,4 @@ button {
 
 button:hover {
     background: #45a049;
-}
-footer {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 20px 0;
-}
-
-footer hr {
-    margin-bottom: 20px;
-}
-
-footer img {
-    margin: 0 10px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-footer img:hover {
-    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }

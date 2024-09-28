@@ -1,0 +1,134 @@
+/* Reset de margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-branco1: #E0E0E0;
+  --cor-branco2: #FFFFFF;
+  --cor-verde1: #228B22;
+  --cor-verde2: #66BB6A;
+  --cor-verde3: #98FF98;
+  --cor-verde4: #047857;
+  --cor-hover: #272727;
+}
+
+/* Estilos Globais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-branco1);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--cor-verde4);
+  color: var(--cor-branco2);
+  padding: 20px 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: right;
+  padding-left: 20px;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: var(--cor-branco2);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos do Main */
+.container-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.container-main-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor-branco2);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+}
+
+.container-main-div h1 {
+  font-size: 28px;
+  color: var(--cor-verde4);
+  margin-bottom: 20px;
+}
+
+.container-main-div p {
+  font-size: 18px;
+  color: var(--cor-hover);
+  margin-bottom: 20px;
+}
+
+.container-main-div img {
+  max-width: 40%;
+  height: auto;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+
+#click_button {
+  background-color: var(--cor-verde4);
+  color: var(--cor-branco2);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#click_button:hover {
+  background-color: var(--cor-verde2);
+}
+
+/* Footer */
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer hr {
+  margin-bottom: 20px;
+}
+
+footer img {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+}
+
+footer p {
+  margin-top: 10px;
+  color: var(--cor-hover);
+}
