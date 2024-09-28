@@ -1,4 +1,48 @@
 /* contatso.css */
+
+/* Estilos para o cabeçalho */
+.container-header {
+  display: flex;               /* Coloca a imagem e o menu na mesma linha */
+  align-items: center;         /* Alinha verticalmente no centro */
+  justify-content: space-between; /* Espaça os itens da logo e navegação */
+  padding: 10px 20px;          /* Espaçamento interno */
+  background-color: var(--cor-branco1); /* Fundo branco claro */
+}
+
+.container-header img {
+  max-height: 50px;
+  /* Remova o filtro de inversão */
+}
+
+
+.container-header img svg {
+  fill: white; /* Isso vai alterar a cor dos elementos dentro do SVG para branco */
+}
+
+.container-header img {
+  max-height: 50px;
+  filter: brightness(0) invert(1); /* Isso deve deixar a imagem completamente branca */
+}
+
+
+/* Estilos para o menu de navegação */
+.container-header-nav {
+  list-style: none;            /* Remove os marcadores da lista */
+  display: flex;               /* Coloca os itens do menu na mesma linha */
+  gap: 20px;                   /* Espaçamento entre os itens do menu */
+}
+
+.nav-link {
+  text-decoration: none;       /* Remove o sublinhado */
+  color: var(--cor-verde4);    /* Cor dos links */
+  font-size: 1em;              /* Tamanho da fonte */
+}
+
+.nav-link:hover {
+  color: var(--cor-verde1);    /* Muda a cor do link ao passar o mouse */
+}
+
+
 .container-main {
   padding: 20px; /* Espaçamento em torno do conteúdo principal */
   background-color: var(--cor-branco1); /* Fundo branco claro */
