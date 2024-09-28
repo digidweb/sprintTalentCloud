@@ -4,17 +4,17 @@
 }
 
 :root {
-  --cor-branco1: #E0E0E0;
-  --cor-branco2: #FFFFFF;
+  --cor-branco1: #e0e0e0;
+  --cor-branco2: #ffffff;
 
-  --cor-verde1: #228B22;
-  --cor-verde2: #66BB6A;
-  --cor-verde3: #98FF98;
+  --cor-verde1: #228b22;
+  --cor-verde2: #66bb6a;
+  --cor-verde3: #98ff98;
   --cor-verde4: #047857;
 
-  --cor-hover: #272727; 
+  --cor-hover: #272727;
 
-  --font-family-base: 'Arial', sans-serif;
+  --font-family-base: "Arial", sans-serif;
 }
 
 body {
@@ -22,174 +22,215 @@ body {
 }
 
 /* seção cabeçalho */
-/* .container-header {
-  display: flex;
-  margin: 20px 10px;
-  justify-content: space-around;
-  align-items: center; 
-  background-color: var(--cor-branco1);
-  
-} */
 
 .container-header {
   display: flex;
-  margin: 0; /* Remove qualquer margem externa */
-  padding: 20px 10px; /* Mantém o padding interno se necessário */
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: row;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between;
+  margin: 0;
+  padding: 20px 10px;
   background-color: var(--cor-verde4);
-  width: 100%; /* Garante que o footer ocupe 100% da largura da viewport */
-  box-sizing: border-box; /* Inclui o padding na largura total */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-
-.container-header img {
+.container-header-img {
   width: 13%;
+  margin: 0; /* Remove margens verticais indesejadas */
+  padding: 0;
 }
 
-.container-header-nav .nav-link {
+.container-nav-links {
+  display: flex;
+  flex-direction: row; /* Itens na mesma linha */
+  align-items: center; /* Garante que os links fiquem alinhados verticalmente ao centro */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+.nav-link {
   text-decoration: none;
   color: var(--cor-branco2);
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 600;
-  margin-left: 50px; 
-  transition: color 0.3s; 
+  transition: color 0.3s;
 }
 
-.container-header-nav .nav-link:hover {
-  color: var(--cor-branco1); 
+.nav-link:hover {
+  color: var(--cor-branco1); /* Cor ao passar o mouse */
 }
 
-/* seção conteudo */
+/* seção conteudo(main) */
 
 .container-main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 86vh; /* Ocupa pelo menos 80% da altura da viewport */
-  background-color: var(--cor-branco1); /* Fundo para diferenciar do cabeçalho */
+  min-height: 100vh; /* Garante que o conteúdo ocupe 100% da altura da viewport */
+  background-color: var(--cor-branco1); /* Cor de fundo */
+  padding: 20px; /* Espaçamento nas laterais */
 }
 
+#contact-title {
+  font-size: 1.5em; /* Tamanho da fonte do título */
+  color: var(--cor-verde4); /* Cor do título */
+  margin-bottom: 20px; /* Margem inferior do título */
+}
+
+#contact-description {
+  font-size: 1.2em; /* Tamanho da fonte da descrição */
+  color: var(--cor-verde1); /* Cor da descrição */
+  margin-bottom: 20px; /* Margem inferior da descrição */
+  margin-top: 5px; /* Margem superior da descrição */
+}
+
+
+/* Estilos para o container do formulário */
 .container-main-div {
   background-color: var(--cor-branco2);
-  padding: 69px;
+  padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para destacar o formulário */
-  max-width: 800px;
-  width: 100%; /* Para garantir que ocupe 100% do espaço no mobile */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+  max-width: 600px; /* Dimensão máxima do container */
+  width: 120%; /* Responsividade */
+  margin: 20px; /* Distância em relação às bordas */
 }
 
+/* Estilos para o título */
 .container-main-div h1 {
-  font-size: 28px;
+  font-size: 32px;
   color: var(--cor-verde4);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
+/* Estilos para o formulário */
 .container-main-form {
   display: flex;
   flex-direction: column;
+  gap: 20px; /* Distância entre os elementos do formulário */
 }
 
-.container-main-form-Labels {
-  display: flex;
-  flex-direction: row;
-  gap: 114px;
-}
-
-.container-main-form-inputs {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
+/* Estilos para os labels */
 .container-main-form label {
   font-size: 18px;
-  margin-bottom: 8px;
   color: var(--cor-verde4);
 }
 
+/* Estilos para os inputs e textarea */
 .container-main-form input[type="text"],
 .container-main-form textarea {
-  resize: none;
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid var(--cor-verde2);
-  border-radius: 4px;
+  padding: 15px;
+  margin-top: 5px;
+  border: 1px solid var(--cor-verde3);
+  border-radius: 6px;
   font-size: 16px;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: none;
 }
 
 .container-main-form input[type="text"]:focus,
 .container-main-form textarea:focus {
   border-color: var(--cor-verde4);
-  box-shadow: 0 0 8px rgba(0, 150, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 150, 0, 0.3);
+  
 }
 
+/* Estilos para o botão de envio */
 #click_button {
-  background-color: var(--cor-verde2);
+  background-color: var(--cor-verde4);
   color: var(--cor-branco2);
-  padding: 18px;
-  width: 830px;
-  height: 80px;
+  padding: 15px;
   border: none;
-  border-radius: 4px;
-  font-size: 20px;
-
+  border-radius: 6px;
+  font-size: 18px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 #click_button:hover {
-  background-color: var(--cor-verde4);
+  background-color: var(--cor-verde2);
 }
 
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container-main-div {
+    padding: 30px;
+  }
 
+  .container-main-div h1 {
+    font-size: 28px;
+  }
 
+  .container-main-form input[type="text"],
+  .container-main-form textarea {
+    padding: 12px;
+  }
+
+  #click_button {
+    width: 100%; /* Ocupa toda a largura do container */
+  }
+}
 /* seção footer */
 
 .container-footer {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 20px 10px;
+  text-align: center;
+  padding: 10px 5px; /* Reduzido para ocupar menos espaço */
   background-color: var(--cor-verde4);
-  color: black;
+  color: var(--cor-branco2); /* Aumenta o contraste com o fundo */
   width: 100%; /* Garante que o footer ocupe toda a largura da página */
   margin: 0; /* Remove margens externas */
-  box-sizing: border-box; /* Inclui padding na largura total */
+  box-sizing: border-box; /* Inclui o padding na largura total */
 }
 
-
 .container-footer p {
-  font-size: 16px;
+  font-size: 14px; /* Tamanho de fonte um pouco menor */
   font-style: italic;
+  margin-bottom: 10px; /* Reduzido para ocupar menos espaço */
 }
 
 .container-footer-nav {
   display: flex;
-  gap: 20px; /* Espaçamento entre os links de navegação */
+  justify-content: center;
+  gap: 10px; /* Espaçamento ajustado para menos espaço entre ícones */
 }
 
 .direitos-autorais {
-  color: var(--cor-branco2); 
+  color: var(--cor-branco2); /* Mantém o contraste com o fundo */
 }
 
 .media-icon {
-  color: var(--cor-branco2);
+  width: 30px; /* Reduzido para ícones menores e mais discretos */
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.media-icon:hover {
+  transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+  filter: brightness(1.2); /* Leve aumento no brilho ao passar o mouse */
 }
 
 .container-footer-nav .nav-link {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
+  color: var(--cor-branco2); /* Cor consistente com o restante do footer */
+  font-size: 14px; /* Fonte um pouco menor */
   font-weight: 500;
   transition: color 0.3s;
 }
 
 .container-footer-nav .nav-link:hover {
-  color: var(--cor-hover);
+  color: var(--cor-hover); /* Cor de hover para diferenciar */
   transform: scale(1.05);
 }
+
