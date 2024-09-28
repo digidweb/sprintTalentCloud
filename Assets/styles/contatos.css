@@ -1,77 +1,18 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --cor-branco1: #e0e0e0;
-  --cor-branco2: #ffffff;
-
-  --cor-verde1: #228b22;
-  --cor-verde2: #66bb6a;
-  --cor-verde3: #98ff98;
-  --cor-verde4: #047857;
-
-  --cor-hover: #272727;
-
-  --font-family-base: "Arial", sans-serif;
-}
-
-body {
-  font-family: var(--font-family-base);
-}
-
-/* seção cabeçalho */
-
-.container-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* Alinha os itens verticalmente ao centro */
-  justify-content: space-between;
-  margin: 0;
-  padding: 20px 10px;
-  background-color: var(--cor-verde4);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.container-header-img {
-  width: 13%;
-  margin: 0; /* Remove margens verticais indesejadas */
-  padding: 0;
-}
-
-.container-nav-links {
-  display: flex;
-  flex-direction: row; /* Itens na mesma linha */
-  align-items: center; /* Garante que os links fiquem alinhados verticalmente ao centro */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 15px; /* Espaçamento entre os itens */
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--cor-branco2);
-  font-size: 28px;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: var(--cor-branco1); /* Cor ao passar o mouse */
-}
-
-/* seção conteudo(main) */
-
+/* contatso.css */
 .container-main {
-  display: flex;
-  justify-content: center;
+  padding: 20px; /* Espaçamento em torno do conteúdo principal */
+  background-color: var(--cor-branco1); /* Fundo branco claro */
   align-items: center;
-  min-height: 100vh; /* Garante que o conteúdo ocupe 100% da altura da viewport */
-  background-color: var(--cor-branco1); /* Cor de fundo */
-  padding: 20px; /* Espaçamento nas laterais */
+}
+
+.container-main-div {
+  max-width: 80rem; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: var(--cor-branco2); /* Fundo branco */
+  display: inline-block;
 }
 
 #contact-title {
@@ -88,149 +29,37 @@ body {
 }
 
 
-/* Estilos para o container do formulário */
-.container-main-div {
-  background-color: var(--cor-branco2);
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
-  max-width: 600px; /* Dimensão máxima do container */
-  width: 120%; /* Responsividade */
-  margin: 20px; /* Distância em relação às bordas */
-}
-
-/* Estilos para o título */
-.container-main-div h1 {
-  font-size: 32px;
-  color: var(--cor-verde4);
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* Estilos para o formulário */
 .container-main-form {
   display: flex;
-  flex-direction: column;
-  gap: 20px; /* Distância entre os elementos do formulário */
+  flex-direction: column; /* Alinha os itens verticalmente */
 }
 
-/* Estilos para os labels */
 .container-main-form label {
-  font-size: 18px;
-  color: var(--cor-verde4);
+  margin-top: 10px; /* Espaçamento acima do rótulo */
+  font-weight: bold; /* Negrito para os rótulos */
 }
 
-/* Estilos para os inputs e textarea */
-.container-main-form input[type="text"],
+.container-main-form input, 
 .container-main-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-top: 5px;
-  border: 1px solid var(--cor-verde3);
-  border-radius: 6px;
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  resize: none;
+  padding: 10px; /* Espaçamento interno */
+  margin-top: 5px; /* Espaçamento acima do campo */
+  border: 1px solid var(--cor-verde1); /* Borda verde */
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 1em; /* Tamanho da fonte */
 }
 
-.container-main-form input[type="text"]:focus,
-.container-main-form textarea:focus {
-  border-color: var(--cor-verde4);
-  box-shadow: 0 0 8px rgba(0, 150, 0, 0.3);
-  
+.container-main-form input[type="submit"] {
+  background-color: var(--cor-verde2); /* Fundo verde */
+  color: var(--cor-branco2); /* Texto branco */
+  border: none; /* Sem borda */
+  padding: 10px; /* Espaçamento interno */
+  cursor: pointer; /* Mão ao passar o mouse */
+  margin-top: 15px; /* Espaçamento acima do botão */
+  font-size: 1em; /* Tamanho da fonte */
+  border-radius: 4px; /* Bordas arredondadas */
 }
 
-/* Estilos para o botão de envio */
-#click_button {
-  background-color: var(--cor-verde4);
-  color: var(--cor-branco2);
-  padding: 15px;
-  border: none;
-  border-radius: 6px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-align: center;
+.container-main-form input[type="submit"]:hover {
+  background-color: var(--cor-verde3); /* Fundo verde claro ao passar o mouse */
+  transition: background-color 0.3s; /* Transição suave */
 }
-
-#click_button:hover {
-  background-color: var(--cor-verde2);
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .container-main-div {
-    padding: 30px;
-  }
-
-  .container-main-div h1 {
-    font-size: 28px;
-  }
-
-  .container-main-form input[type="text"],
-  .container-main-form textarea {
-    padding: 12px;
-  }
-
-  #click_button {
-    width: 100%; /* Ocupa toda a largura do container */
-  }
-}
-/* seção footer */
-
-.container-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px 5px; /* Reduzido para ocupar menos espaço */
-  background-color: var(--cor-verde4);
-  color: var(--cor-branco2); /* Aumenta o contraste com o fundo */
-  width: 100%; /* Garante que o footer ocupe toda a largura da página */
-  margin: 0; /* Remove margens externas */
-  box-sizing: border-box; /* Inclui o padding na largura total */
-}
-
-.container-footer p {
-  font-size: 14px; /* Tamanho de fonte um pouco menor */
-  font-style: italic;
-  margin-bottom: 10px; /* Reduzido para ocupar menos espaço */
-}
-
-.container-footer-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px; /* Espaçamento ajustado para menos espaço entre ícones */
-}
-
-.direitos-autorais {
-  color: var(--cor-branco2); /* Mantém o contraste com o fundo */
-}
-
-.media-icon {
-  width: 30px; /* Reduzido para ícones menores e mais discretos */
-  height: 30px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  cursor: pointer;
-}
-
-.media-icon:hover {
-  transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
-  filter: brightness(1.2); /* Leve aumento no brilho ao passar o mouse */
-}
-
-.container-footer-nav .nav-link {
-  text-decoration: none;
-  color: var(--cor-branco2); /* Cor consistente com o restante do footer */
-  font-size: 14px; /* Fonte um pouco menor */
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.container-footer-nav .nav-link:hover {
-  color: var(--cor-hover); /* Cor de hover para diferenciar */
-  transform: scale(1.05);
-}
-
