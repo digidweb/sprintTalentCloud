@@ -3,6 +3,52 @@
   padding: 0;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-branco2);
+}
+
+#header {
+  background-color: var(--cor-verde4); /* Verde escuro */
+  color: var(--cor-branco2);
+  padding: 20px 0;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Alinha os itens à direita */
+  padding-left: 20px; /* Adiciona espaçamento à esquerda */
+  font-size: 15px;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: var(--cor-branco2);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--cor-branco2);
+  display: flex;
+  flex-direction: column; /* Alinha itens em coluna */
+}
+
 :root {
   --cor-branco1: #E0E0E0;
   --cor-branco2: #FFFFFF;
