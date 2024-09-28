@@ -1,0 +1,36 @@
+/* || GENERAL STYLES */
+
+:root {
+    margin: 0;
+    padding: 0;
+
+    --cor-branco1: #E0E0E0;
+    --cor-branco2: #FFFFFF;
+
+    --cor-verde1: #228B22;
+    --cor-verde2: #66BB6A;
+    --cor-verde3: #98FF98;
+    --cor-verde4: #047857;
+
+    --cor-hover: #272727; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-branco2);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    /* … */
+}
+
+ul {
+    /* … */
+}
+
+blockquote {
+    /* … */
+}
