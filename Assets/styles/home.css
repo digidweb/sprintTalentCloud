@@ -1,0 +1,111 @@
+/* home.css */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-branco2);
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--cor-branco2);
+    display: flex;
+    flex-direction: column; /* Alinha itens em coluna */
+}
+
+section h1 {
+    font-size: 28px;
+    color: var(--cor-verde4);
+}
+
+section p {
+    font-size: 18px;
+    color: var(--cor-hover);
+    line-height: 1.6;
+}
+
+button {
+    background-color: var(--cor-verde1); /* Verde do botão */
+    color: var(--cor-branco2);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: var(--cor-verde4); /* Escurecendo o verde ao passar o mouse */
+}
+
+#img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+}
+
+div {
+    padding: 30px;
+    background-color: var(--cor-branco1);
+    color: var(--cor-hover);
+    font-size: larger;
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+#secoes-resumidas {
+    display: flex;
+    flex-direction: column; /* Mantém as divs em coluna */
+    margin-top: 40px; /* Espaço acima da seção */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.resumo-pagina {
+    display: block; /* Garante que a div ocupe toda a largura */
+    width: 80%; /* Ocupa toda a largura disponível */
+    margin: 0 auto 20px; /* Centraliza a div e dá espaço embaixo */
+    padding: 15px; /* Adicione um pouco de padding, se desejar */
+    background-color: var(--cor-branco1); /* Pode manter ou alterar conforme necessário */
+    border-radius: 0.5rem; /* Para arredondar os cantos */
+}
+.container-main-div {
+    display: flex; /* Torna a div flexível */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    margin-bottom: 20px; /* Espaço entre a div e a imagem */
+}
+
+.container-main-div h1 {
+    margin-right: 40px; /* Espaço entre o título e a imagem */
+}
+
+.container-main-div p {
+    margin-right: 20px; /* Espaço entre o parágrafo e a imagem */
+}
+
+#img {
+    max-width: 50%; /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
+}
+#div-top{
+background-color: var(--cor-branco2);
+}
+#sec_central{
+    max-width:80%;
+    align-items: center;
+    padding-left: 6.2rem;
+}

@@ -1,0 +1,60 @@
+/* planos.css */
+:root {
+    --cor-branco1: #E0E0E0;
+    --cor-branco2: #FFFFFF;
+    --cor-verde1: #228B22;
+    --cor-verde2: #66BB6A;
+    --cor-verde3: #98FF98;
+    --cor-verde4: #047857;
+    --cor-hover: #272727; 
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div > div {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 30%; /* Ajusta a largura dos planos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
