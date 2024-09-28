@@ -9,9 +9,17 @@
 }
 
 #header {
+    display: flex; /* Usa Flexbox para o layout do header */
+    justify-content: space-between; /* Espaço entre a logo e a navegação */
+    align-items: center; /* Alinha verticalmente os itens */
     background-color: var(--cor-verde4); /* Verde escuro */
     color: var(--cor-branco2);
-    padding: 20px 0;
+    padding: 20px;
+}
+
+#header img {
+    max-width: 150px; /* Ajuste o tamanho da imagem se necessário */
+    filter: brightness(0) invert(1); /* Deixa a logo branca se for uma imagem escura */
 }
 
 .nav-list {
@@ -19,18 +27,21 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: right; /* Alinha os itens à direita */
-    padding-left: 20px; /* Adiciona espaçamento à esquerda */
+    gap: 15px; /* Espaço entre os links */
 }
 
 .nav-list li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 .nav-list a {
     color: var(--cor-branco2);
     text-decoration: none;
     font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: var(--cor-hover); /* Cor ao passar o mouse */
 }
 
 footer {
