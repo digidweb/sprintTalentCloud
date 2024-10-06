@@ -47,6 +47,7 @@
     border: 1px solid var(--cor-verde1); /* Borda verde */
     border-radius: 4px; /* Bordas arredondadas */
     font-size: 1em; /* Tamanho da fonte */
+    resize: none;
 }
 
 .container-main-form input[type="submit"] {
