@@ -11,6 +11,10 @@ let phoneInput = document.getElementById('phone');
 let phoneHelper = document.getElementById('phone-helper');
 let phoneLabel = document.querySelector('label[for="phone"]');
 
+let messageInput = document.getElementById('message');
+let messageHelper = document.getElementById('message-helper');
+let messageLabel = document.querySelector('label[for="message"]');
+
 let submitButton = document.getElementById('click_button');
 
 // Função para exibir ou esconder o popup de campo obrigatório
@@ -23,9 +27,40 @@ function mostrarPopup(input, label) {
   });
 }
 
-// Função para validar cada campo
+// Função para validar a mensagem
+function validateMessageLength() {
+  let messageValue = messageInput.value.trim();
+  
+  if (messageValue === "") {
+    messageInput.classList.add('error');
+    messageHelper.innerText = "A mensagem é obrigatória.";
+    messageHelper.classList.add('visible');
+    return false;  // Campo vazio é inválido
+  }
+  
+  if (messageValue.length < 10) {
+    messageInput.classList.add('error');
+    messageHelper.innerText = "A mensagem deve conter pelo menos 10 caracteres.";
+    messageHelper.classList.add('visible');
+    return false;
+  } else {
+    messageInput.classList.remove('error');
+    messageHelper.classList.remove('visible');
+    return true;
+  }
+}
+
+// Função para validar outros campos
 function validateField(input, regex, helper, errorMessage) {
   let value = input.value.trim();
+  
+  if (value === "") {
+    input.classList.add('error');
+    helper.innerText = "Este campo é obrigatório.";
+    helper.classList.add('visible');
+    return false;  // Campo vazio é inválido
+  }
+  
   if (!regex.test(value)) {
     input.classList.add('error');
     input.classList.remove('correct');
@@ -46,9 +81,10 @@ function validateForm() {
   let isUsernameValid = validateField(usernameInput, /^.{3,}$/, usernameHelper, "O nome deve ter pelo menos 3 caracteres");
   let isEmailValid = validateField(emailInput, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, emailHelper, "O email deve ser nesse formato usuario@dominio.com");
   let isPhoneValid = validateField(phoneInput, /^\+?\d{1,4}[\s-]?\(?\d{2,3}\)?[\s-]?\d{4,5}[\s-]?\d{4}$/, phoneHelper, "O telefone deve ser nesse formato +55 11 91234-5678");
+  let isMessageLengthValid = validateMessageLength();
 
-   // Verificar se todos os campos são válidos
-  return isUsernameValid && isEmailValid && isPhoneValid;
+  // Verificar se todos os campos são válidos e não estão vazios
+  return isUsernameValid && isEmailValid && isPhoneValid && isMessageLengthValid;
 }
 
 // Evento de clique do botão de envio
@@ -63,7 +99,7 @@ submitButton.addEventListener('click', (e) => {
     alert("Formulário enviado com sucesso!");
     // Enviar o formulário aqui se necessário
   } else {
-    alert("Complete os campos faltantes!");
+    alert("Por favor, preencha todos os campos corretamente antes de enviar.");
   }
 });
 
@@ -71,8 +107,12 @@ submitButton.addEventListener('click', (e) => {
 mostrarPopup(usernameInput, usernameLabel);
 mostrarPopup(emailInput, emailLabel);
 mostrarPopup(phoneInput, phoneLabel);
+mostrarPopup(messageInput, messageLabel);
 
-// Validar o formulário ao mudar os campos
-usernameInput.addEventListener('input', validateForm);
-emailInput.addEventListener('input', validateForm);
-phoneInput.addEventListener('input', validateForm);
+// Validar o campo de mensagem individualmente ao modificar
+messageInput.addEventListener('input', validateMessageLength);
+
+// Validar outros campos ao modificar
+usernameInput.addEventListener('input', () => validateField(usernameInput, /^.{3,}$/, usernameHelper, "O nome deve ter pelo menos 3 caracteres"));
+emailInput.addEventListener('input', () => validateField(emailInput, /^[^\s@]+@[^\s@]+\.[^\s@]+$/, emailHelper, "O email deve ser nesse formato usuario@dominio.com"));
+phoneInput.addEventListener('input', () => validateField(phoneInput, /^\+?\d{1,4}[\s-]?\(?\d{2,3}\)?[\s-]?\d{4,5}[\s-]?\d{4}$/, phoneHelper, "O telefone deve ser nesse formato +55 11 91234-5678"));
